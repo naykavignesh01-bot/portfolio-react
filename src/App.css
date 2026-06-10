@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: burlywood;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.navbar ul li {
+  background-color: white;
+  color: black;
+  padding: 6px 12px;
+  font-size: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.navbar ul li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.hero {
+  text-align: center;
+
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 60px;
+}
+
+.hero h2 {
+  margin-top: 10px;
+  color: #04163c;
+}
+
+.hero p {
+  margin-top: 20px;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  background-color: rgb(244, 219, 187);
+}
+
+.about {
+  padding: 80px 20px;
+  text-align: center;
+  background: whitesmoke;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: auto;
+}
+
+.projects {
+  padding: 80px 20px;
+  text-align: center;
+  background: #ffe9c1;
+}
+
+.project-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.project-card {
+  width: 300px;
+  background: whitesmoke;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact {
+  padding: 30px 20px;
+  background: #fdd9a986;
+}
+
+.contact h2 {
+  margin-bottom: 10px;
+}
+
+.contact p {
+  margin: 5px 0;
+}
+
+.footer {
+  padding: 10px 20px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .project-card {
+    width: 90%;
+    max-width: 350px;
+    margin: 10px auto;
+  }
+
+  .about,
+.projects {
+  padding: 50px 15px;
+}
+
+.contact {
+  padding: 20px 15px;
+}
+
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+}
