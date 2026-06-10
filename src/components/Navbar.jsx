@@ -5,7 +5,7 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <h2>Vignesh</h2>
+      <h1>Vignesh</h1>
 
       <button
         className="menu-btn"
@@ -14,23 +14,13 @@ function Navbar() {
         ☰
       </button>
 
-      <ul className={menuOpen ? "nav-links active" : "nav-links"}>
-        <li>
-          <a href="#home">Home</a>
-        </li>
-
-        <li>
-          <a href="#about">About</a>
-        </li>
-
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
+      <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
+  <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
+  <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
+  <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
+  <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
+  <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+</ul>
     </nav>
   );
 }

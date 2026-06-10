@@ -4,44 +4,61 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
+  background-color: rgb(244, 219, 187);
+  overflow-x: hidden;
 }
+
+/* Navbar */
 
 .navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
   background: burlywood;
+  padding: 20px;
+  position: relative;
 }
 
-.navbar ul {
-  display: flex;
-  list-style: none;
-  gap: 10px;
-  margin-top: 10px;
+.navbar h1 {
+  font-size: 40px;
 }
 
-.navbar ul li {
-  background-color: white;
-  color: black;
-  padding: 6px 12px;
-  font-size: 10px;
-  border-radius: 20px;
+.menu-btn {
+  display: none;
+  font-size: 32px;
+  border: none;
+  background: none;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-.navbar ul li:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+.nav-links {
+  display: flex;
+  gap: 15px;
+  list-style: none;
 }
+
+.nav-links li {
+  background: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* Hero */
 
 .hero {
   text-align: center;
-
   padding: 100px 20px;
 }
 
@@ -65,9 +82,23 @@ body {
   cursor: pointer;
 }
 
-body {
-  background-color: rgb(244, 219, 187);
+.profile-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: white;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: gray;
+  border: 5px solid white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* About */
 
 .about {
   padding: 80px 20px;
@@ -83,6 +114,66 @@ body {
   max-width: 700px;
   margin: auto;
 }
+
+/* Skills */
+
+.skills {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.skills h2 {
+  margin-bottom: 30px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.skills-container span {
+  background: white;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Form */
+
+.contact-form {
+  max-width: 600px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #04163c;
+  color: white;
+  cursor: pointer;
+}
+
+/* Projects */
 
 .projects {
   padding: 80px 20px;
@@ -100,14 +191,17 @@ body {
 
 .project-card {
   width: 300px;
-  background: whitesmoke;
+  background: white;
   padding: 20px;
   border-radius: 10px;
 }
 
+/* Contact */
+
 .contact {
   padding: 30px 20px;
   background: #fdd9a986;
+  text-align: center;
 }
 
 .contact h2 {
@@ -118,45 +212,59 @@ body {
   margin: 5px 0;
 }
 
+/* Footer */
+
 .footer {
-  padding: 10px 20px;
-  margin: 0;
+  padding: 20px;
+  text-align: center;
 }
 
-.menu-btn {
-  display: none;
-  font-size: 24px;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
+/* Mobile */
 
 @media (max-width: 768px) {
   .menu-btn {
     display: block;
   }
 
+  .navbar {
+    flex-wrap: wrap;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 15px;
+    text-align: center;
   }
 
   .nav-links.active {
-    display: flex;
-  }
+  display: flex;
+  background: #f6d494;
+  padding: 15px;
+  border-radius: 12px;
 }
 
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
+.nav-links li {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.nav-links li:hover {
+  background: #fcca4c;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links li:hover a {
+  color: rgb(9, 0, 0);
+}
+
+  .nav-links li {
+    width: 100%;
   }
 
   .hero h1 {
@@ -167,35 +275,7 @@ body {
     font-size: 24px;
   }
 
-  .hero p {
-    font-size: 16px;
-  }
-
   .project-card {
     width: 90%;
-    max-width: 350px;
-    margin: 10px auto;
   }
-
-  .about,
-.projects {
-  padding: 50px 15px;
-}
-
-.contact {
-  padding: 20px 15px;
-}
-
-html,
-body {
-  overflow-x: hidden;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: black;
 }
