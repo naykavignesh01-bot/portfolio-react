@@ -13,11 +13,7 @@ function Contact() {
       return;
     }
 
-    alert("Form Submitted Successfully");
-
-    setName("");
-    setEmail("");
-    setMessage("");
+    alert("Message Sent Successfully!");
   };
 
   return (
@@ -39,11 +35,11 @@ function Contact() {
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        <textarea>
+        <textarea
           placeholder="Message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-        </textarea>
+        />
 
         <button type="submit">
           Send Message
