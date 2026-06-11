@@ -3,12 +3,13 @@ function Contact() {
     <section className="contact" id="contact">
       <h2>Contact Me</h2>
 
-      <form className="contact-form">
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <textarea placeholder="Message"></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+      <p>
+        <strong>Email:</strong> vignesh01@gmail.com
+      </p>
+
+      <p>
+        <strong>Phone:</strong> +91 9327573873
+      </p>
     </section>
   );
 }
