@@ -199,27 +199,24 @@ body {
 /* Contact */
 
 .contact {
-  padding: 30px 20px 0;
+  padding: 30px 20px;
   background: #fdd9a986;
   text-align: center;
 }
 
 .contact h2 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .contact p {
   margin: 5px 0;
 }
 
-.footer {
-  padding: 5px 20px;
-  margin: 0;
-  text-align: center;
-}
+/* Footer */
 
-.footer p {
-  margin: 0;
+.footer {
+  padding: 20px;
+  text-align: center;
 }
 
 /* Mobile */
