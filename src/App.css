@@ -22,7 +22,9 @@ body {
   align-items: center;
   background: burlywood;
   padding: 20px;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar h1 {
@@ -30,7 +32,7 @@ body {
 }
 
 .menu-btn {
-  display: none;
+  display: block;
   font-size: 32px;
   border: none;
   background: none;
@@ -38,21 +40,52 @@ body {
 }
 
 .nav-links {
-  display: flex;
-  gap: 15px;
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 0;
+  text-align: center;
   list-style: none;
+}
+
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #f6d494;
+  padding: 0 15px 15px 15px;
+  z-index: 999;
 }
 
 .nav-links li {
   background: white;
-  padding: 10px 15px;
   border-radius: 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .nav-links li a {
+  display: block;
+  width: 100%;
+  padding: 15px;
   text-decoration: none;
   color: black;
   font-weight: bold;
+  text-align: center;
+}
+
+.nav-links li:hover {
+  background: #fcca4c;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links li:hover a {
+  color: rgb(9, 0, 0);
 }
 
 /* Hero */
@@ -219,6 +252,14 @@ body {
   text-align: center;
 }
 
+#about,
+#skills,
+#projects,
+#contact,
+#home {
+  scroll-margin-top: 120px;
+}
+
 /* Mobile */
 
 @media (max-width: 768px) {
@@ -228,43 +269,6 @@ body {
 
   .navbar {
     flex-wrap: wrap;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 15px;
-    text-align: center;
-  }
-
-  .nav-links.active {
-  display: flex;
-  background: #f6d494;
-  padding: 15px;
-  border-radius: 12px;
-}
-
-.nav-links li {
-  background: white;
-  padding: 12px;
-  border-radius: 10px;
-  margin: 5px 0;
-  transition: all 0.3s ease;
-}
-
-.nav-links li:hover {
-  background: #fcca4c;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.nav-links li:hover a {
-  color: rgb(9, 0, 0);
-}
-
-  .nav-links li {
-    width: 100%;
   }
 
   .hero h1 {

@@ -5,23 +5,37 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <h1>Vignesh</h1>
+  <h1>Vignesh</h1>
 
-      <button
-        className="menu-btn"
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        ☰
-      </button>
+  <button
+    className="menu-btn"
+    onClick={() => setMenuOpen(!menuOpen)}
+  >
+    ☰
+  </button>
 
-      <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-  <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
-  <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
-  <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
-  <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
-  <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
-</ul>
-    </nav>
+  <ul className={menuOpen ? "nav-links active" : "nav-links"}>
+    <li onClick={() => setMenuOpen(false)}>
+      <a href="#home">Home</a>
+    </li>
+
+    <li onClick={() => setMenuOpen(false)}>
+      <a href="#about">About</a>
+    </li>
+
+    <li onClick={() => setMenuOpen(false)}>
+      <a href="#skills">Skills</a>
+    </li>
+
+    <li onClick={() => setMenuOpen(false)}>
+      <a href="#projects">Projects</a>
+    </li>
+
+    <li onClick={() => setMenuOpen(false)}>
+      <a href="#contact">Contact</a>
+    </li>
+  </ul>
+</nav>
   );
 }
 
