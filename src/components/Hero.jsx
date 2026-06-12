@@ -1,10 +1,13 @@
+import profile from "../assets/profile.jpg";
 function Hero() {
   return (
     <section className="hero" id="home">
 
-      <div className="profile-circle">
-        <span>Photo</span>
-      </div>
+      <img
+  src={profile}
+  alt="Profile"
+  className="profile-img"
+/>
 
       <h1>Hi, I'm Vignesh</h1>
       <h2>React Developer</h2>
