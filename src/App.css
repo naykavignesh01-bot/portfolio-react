@@ -137,6 +137,19 @@ section {
 max-width: 100%;
 }
 
+.resume-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 /* About */
 
 .about {

@@ -5,7 +5,7 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-  <h1>Vignesh</h1>
+  <h1>Portfolio Website</h1>
 
   <button
     className="menu-btn"

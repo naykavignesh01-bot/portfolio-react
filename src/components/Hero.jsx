@@ -1,13 +1,14 @@
 import profile from "../assets/profile.jpg";
+
 function Hero() {
   return (
     <section className="hero" id="home">
 
       <img
-  src={profile}
-  alt="Profile"
-  className="profile-img"
-/>
+        src={profile}
+        alt="Profile"
+        className="profile-img"
+      />
 
       <h1>Hi, I'm Vignesh</h1>
       <h2>React Developer</h2>
@@ -16,7 +17,14 @@ function Hero() {
         I create modern and responsive websites using ReactJS.
       </p>
 
-      <button>Download Resume</button>
+      <a
+  href="/Resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button>View Resume</button>
+</a>
+
     </section>
   );
 }
